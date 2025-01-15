@@ -1,95 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import type {Metadata} from "next";
+import {Button, Htag, Ptag, Rating, Tag} from "@/components";
+import {useState} from "react";
+
+
+// export const metadata: Metadata = {
+//   title: "Исправленные данные",
+//   description: "Описание ",
+// };
+
+// export async function generateMetadata(): Promise<Metadata> {
+//     // data
+//     return {
+//         title: 'Computed metadata'
+//     }
+// }
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    const [rating, setRating ] = useState<number>(4)
+    return (
+        <>
+            <Htag tag="h1">h1</Htag>
+            <Button appearance='ghost' arrow='right' >Кнопка</Button>
+            <Button appearance='primary' arrow='down'>Кнопка</Button>
+            <Ptag size="s">
+                123123asdasd
+            </Ptag>
+            <Ptag size="m">
+                123123asdasd
+            </Ptag>
+            <Ptag size="l">
+                123123asdasd
+            </Ptag>
+            <Tag size="s">ghost</Tag>
+            <Tag size="m" color="red">ghost</Tag>
+            <Tag size="s" color="green">ghost</Tag>
+            <Tag  color="primary" href="#">ghost</Tag>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            <Rating rating={rating} isEditable setRating={setRating}></Rating>
+
+        </>
+    );
 }

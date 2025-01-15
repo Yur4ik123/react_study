@@ -4,22 +4,33 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "debug": "NODE_OPTIONS='--inspect' next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "stylelint": "stylelint \"**/*.css\" --fix",
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "next": "15.1.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^9.18.0",
     "eslint-config-next": "15.1.4",
-    "@eslint/eslintrc": "^3"
+    "ignore": "7.0.0",
+    "stylelint": "^16.13.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5"
   }
 }
