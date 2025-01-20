@@ -1,5 +1,5 @@
 import {JSX} from "react";
-import {HtagProps} from "@/components/Htag/Htag.props";
+import {HtagProps} from "@/components/UI/Htag/Htag.props";
 import styles from "./Htag.module.css";
 import cn from 'classnames';
 

@@ -1,4 +1,4 @@
-import {PtagProps} from "@/components/Ptag/Ptag.props";
+import {PtagProps} from "@/components/UI/Ptag/Ptag.props";
 import {JSX} from "react";
 import styles from './Ptag.module.css'
 import cn from 'classnames';

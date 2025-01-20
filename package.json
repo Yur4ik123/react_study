@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "next": "15.1.4",
     "react": "^19.0.0",
