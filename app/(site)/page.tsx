@@ -1,26 +1,12 @@
-'use client'
-import type {Metadata} from "next";
-import {Button, Htag, Ptag, Rating, Tag} from "@/components";
 import styles from "./page.module.css";
-import {useState} from "react";
+import {Menu} from "@/app/(site)/components/menu";
 
 
-// export const metadata: Metadata = {
-//   title: "Исправленные данные",
-//   description: "Описание ",
-// };
+export default async function Home() {
 
-// export async function generateMetadata(): Promise<Metadata> {
-//     // data
-//     return {
-//         title: 'Computed metadata'
-//     }
-// }
-
-export default function Home() {
     return (
         <main className={styles.main}>
-
+            <Menu/>
         </main>
     );
 }

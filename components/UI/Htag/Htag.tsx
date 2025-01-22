@@ -1,7 +1,6 @@
 import {JSX} from "react";
 import {HtagProps} from "@/components/UI/Htag/Htag.props";
 import styles from "./Htag.module.css";
-import cn from 'classnames';
 
 export const Htag = ({tag, children}: HtagProps): JSX.Element => {
     switch (tag) {
